@@ -5,12 +5,12 @@ public abstract class BankAccount {
     protected String accHolder;
     protected double Balance;
 
-    public BankAccount(String accNumber, String accHolder, double intialBalance){
+    public BankAccount(String accNumber, String accHolder, double initialBalance){
         this.accNumber = accNumber;
         this.accHolder = accHolder;
 
-        if (intialBalance>=0.0) { 
-            this.Balance = intialBalance;
+        if (initialBalance>=0.0) { 
+            this.Balance = initialBalance;
         }
         else{
             this.Balance = 0.0;
