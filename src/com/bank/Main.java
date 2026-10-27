@@ -1,8 +1,10 @@
 package com.bank;   
 
 import java.util.Scanner;
-import com.bank.model.*;
-import com.bank.service.*;;
+import com.bank.model.BankAccount;
+import com.bank.model.CurrentAccount;
+import com.bank.model.SavingsAccount;
+import com.bank.service.Bank;
 
 public class Main {
     public static void main(String[] args){
@@ -42,6 +44,7 @@ public class Main {
 
                     SavingsAccount savings = new SavingsAccount(s_accNo,s_accHolder,s_intialBalance,s_interestRate);
                     myBank.addacc(savings);
+                    break;
 
                 case 2:
                     System.out.println("Enter A/C number: ");
@@ -58,6 +61,7 @@ public class Main {
 
                     CurrentAccount current = new CurrentAccount(c_accNo, c_accHolder, c_intialBalance, c_overdraftlimit);
                     myBank.addacc(current);
+                    break;
                 
                 case 3:
                     System.out.println("Enter A/C number: ");
@@ -72,6 +76,7 @@ public class Main {
                     else{
                         System.out.println("Account not found.");
                     }
+                    break;
                 
                 case 4:
                     System.out.println("Enter A/C number: ");
@@ -86,12 +91,15 @@ public class Main {
                     else{
                         System.out.println("Account not found.");
                     }
+                    break;
                 case 5:
                     myBank.listAllAccounts();
                     break;
 
                 case 6:
                     running = false;
+                    System.out.println("------- Exiting -------");
+                    break;
                 
                 
                 default:
