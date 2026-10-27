@@ -79,20 +79,25 @@ public class Main {
                     BankAccount witAc = myBank.findAccount(wit_accno);
 
                     if (witAc != null){
-                        System.out.println("Enter deposit amount: ");
+                        System.out.println("Enter withdrawal amount: ");
                         double wit_amount = sc.nextInt();
                         witAc.Withdraw(wit_amount);
                     }
                     else{
                         System.out.println("Account not found.");
                     }
+                case 5:
+                    myBank.listAllAccounts();
+                    break;
 
-
-
-                    
+                case 6:
+                    running = false;
+                
+                
+                default:
+                    System.out.println("Invalid choice. Please try again.");                    
             }
-
         }
+        sc.close();
     }
-
     } 
